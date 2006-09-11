@@ -1,3 +1,11 @@
+xserver-xorg-video-sis (1:0.9.1-0ubuntu2) edgy; urgency=low
+
+  * Removed assert call from src/sis_dri.c
+  * Added git patch f16c4ee67f57bea639fb3dfab0cf09c4cd981183 from
+    xf86-video-sis git tree (fixes DRI support for sis300 and sis310)
+
+ -- Rodrigo Parra Novo <rodarvus@ubuntu.com>  Mon, 11 Sep 2006 16:49:36 -0300
+
 xserver-xorg-video-sis (1:0.9.1-0ubuntu1) edgy; urgency=low
 
   * New Upstream release
