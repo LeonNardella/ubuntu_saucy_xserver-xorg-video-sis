@@ -1,0 +1,12 @@
+Index: xserver-xorg-video-sis/src/sis.h
+===================================================================
+--- xserver-xorg-video-sis.orig/src/sis.h	2006-10-13 16:14:34.000000000 -0400
++++ xserver-xorg-video-sis/src/sis.h	2006-10-13 16:14:43.000000000 -0400
+@@ -39,6 +39,7 @@
+ #include <string.h>
+ #include <math.h>
+ #include <setjmp.h>
++#include <assert.h>
+ 
+ #define SISDRIVERVERSIONYEAR    5
+ #define SISDRIVERVERSIONMONTH   9

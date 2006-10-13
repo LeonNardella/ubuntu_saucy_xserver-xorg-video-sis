@@ -1,0 +1,22 @@
+Source: xserver-xorg-video-sis
+Section: x11
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Uploaders: David Nusinow <dnusinow@debian.org>, Branden Robinson <branden@debian.org>, Fabio M. Di Nitto <fabbione@fabbione.net>
+Build-Depends: debhelper (>= 5.0.0), pkg-config, xserver-xorg-dev (>= 2:1.1.1), x11proto-video-dev, x11proto-xext-dev, x11proto-gl-dev, x11proto-xinerama-dev, x11proto-xf86dga-dev, x11proto-xf86misc-dev, libgl1-mesa-dev | libgl-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, libdrm-dev (>> 2.0), x11proto-xf86dri-dev, quilt
+Standards-Version: 3.6.1
+
+Package: xserver-xorg-video-sis
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, xserver-xorg-core (>= 2:1.1.1)
+Provides: xserver-xorg-video-1.0
+Replaces: xserver-xorg (<< 6.8.2-35)
+Description: X.Org X server -- SiS display driver
+ This package provides the driver for all SiS and XGI Volari cards.
+ .
+ More information about X.Org can be found at:
+ <URL:http://xorg.freedesktop.org>
+ <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
+ .
+ This module can be found as the module 'driver/xf86-video-sis' at
+ :pserver:anoncvs@cvs.freedesktop.org:/cvs/xorg
