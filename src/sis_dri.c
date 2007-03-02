@@ -702,9 +702,7 @@ SISDRIFinishScreenInit(ScreenPtr pScreen)
 
     saPriv = (SISSAREAPriv *)DRIGetSAREAPrivate(pScreen);
 
-#if 0
     assert(saPriv);
-#endif
 
     saPriv->CtxOwner = -1;
 

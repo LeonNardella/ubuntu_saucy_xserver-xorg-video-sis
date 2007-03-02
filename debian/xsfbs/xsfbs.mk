@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-# $Id: rules 593 2005-09-03 20:48:30Z dnusinow $
+# $Id: xsfbs.mk 2284 2006-06-06 18:02:50Z branden $
 
 # Debian rules file for xorg-x11 source package
 
@@ -137,6 +137,10 @@ $(STAMP_DIR)/prepare: $(STAMP_DIR)/stampdir
 stampdir_targets+=patch
 patch: $(STAMP_DIR)/patch
 $(STAMP_DIR)/patch: $(STAMP_DIR)/prepare
+	if ! [ `which quilt` ]; then \
+		echo "Couldn't find quilt. Please install it or add it to the build-depends for this package."; \
+		exit 1; \
+	fi; \
 	if quilt next; then \
 	  echo -n "Applying patches..."; \
 	  if quilt push -a -v >$(STAMP_DIR)/log/patch 2>&1; then \

@@ -769,7 +769,7 @@ SiSAccelInit(ScreenPtr pScreen)
 #ifdef SIS_USE_EXA	/* ----------------------- EXA ----------------------- */
        if(pSiS->useEXA) {
 	  pSiS->EXADriverPtr->exa_major = 2;
-	  pSiS->EXADriverPtr->exa_minor = 0;
+	  pSiS->EXADriverPtr->exa_major = 0;
 
 	  /* data */
 	  pSiS->EXADriverPtr->memoryBase = pSiS->FbBase;
