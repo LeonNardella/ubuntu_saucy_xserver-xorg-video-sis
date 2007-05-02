@@ -1,15 +1,32 @@
-xserver-xorg-video-sis (1:0.9.1-4ubuntu1) feisty; urgency=low
+xserver-xorg-video-sis (1:0.9.3-2) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Add link to xserver-xorg-core bug script, so that bugreports contain
+    the user's config and log files.
+  * Bump Standards-Version to 3.7.2.
 
   [ Timo Aaltonen ]
-  * Merge from debian unstable. Remaining changes:
-    - debian/control:
-      + Added Conflicts:, Replaces: xserver-xorg-driver-sis
-      + Change Maintainer address.
+  * Replaces/Conflicts: xserver-xorg-driver-sis.
 
-  [ Kyle McMartin ]
-  * Set dist to feisty, not unstable.
+  [ Brice Goglin ]
+  * Don't build-dep on libdrm-dev on hurd-i386, thanks Michael Banck
+    (closes: #392872).
+  * Install the upstream changelog.
+  * Bump Build-Depends: xserver-xorg-dev to >= 2:1.2.99.902
+    (needed to let xsfbs get access to serverminver).
+  * Add XS-Vcs-*.
+  * Add a link to www.X.org and a reference to the xf86-video-sis
+    module in the long description.
+  * Remove Fabio from uploaders with his permission. He's always welcome back.
 
- -- Kyle McMartin <kyle@ubuntu.com>  Fri,  2 Mar 2007 16:59:35 +0000
+ -- Julien Cristau <jcristau@debian.org>  Wed, 02 May 2007 15:21:11 +0200
+
+xserver-xorg-video-sis (1:0.9.3-1) experimental; urgency=low
+
+  * New upstream version
+  * Generate server dependencies automatically from the ABI
+
+ -- David Nusinow <dnusinow@debian.org>  Wed, 21 Feb 2007 22:54:34 -0500
 
 xserver-xorg-video-sis (1:0.9.1-4) unstable; urgency=low
 

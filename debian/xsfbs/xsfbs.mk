@@ -1,11 +1,10 @@
 #!/usr/bin/make -f
-# $Id: xsfbs.mk 2284 2006-06-06 18:02:50Z branden $
 
-# Debian rules file for xorg-x11 source package
+# Debian X Strike Force Build System (XSFBS): Make portion
 
 # Copyright 1996 Stephen Early
 # Copyright 1997 Mark Eichin
-# Copyright 1998-2005 Branden Robinson
+# Copyright 1998-2005, 2007 Branden Robinson
 # Copyright 2005 David Nusinow
 #
 # Licensed under the GNU General Public License, version 2.  See the file
@@ -127,7 +126,7 @@ $(STAMP_DIR)/prepare: $(STAMP_DIR)/stampdir
 	if [ ! -e $(STAMP_DIR)/log ]; then \
 		mkdir $(STAMP_DIR)/log; \
 	fi; \
-	if [ ! -e patches ]; then \
+	if [ -e debian/patches ] && [ ! -e patches ]; then \
 		ln -s debian/patches patches; \
 	fi; \
 	>$@
@@ -353,6 +352,27 @@ $(STAMP_DIR)/genscripts: $(STAMP_DIR)/stampdir
 # Generate the shlibs.local file.
 debian/shlibs.local:
 	cat debian/*.shlibs >$@
+
+SERVERMINVERS = $(shell cat /usr/share/xserver-xorg/serverminver 2>/dev/null)
+VIDEOABI = $(shell cat /usr/share/xserver-xorg/videoabiver 2>/dev/null)
+INPUTABI = $(shell cat /usr/share/xserver-xorg/inputabiver 2>/dev/null)
+SERVER_DEPENDS = xserver-xorg-core (>= $(SERVERMINVERS))
+VIDDRIVER_PROVIDES = xserver-xorg-video-$(VIDEOABI)
+INPDRIVER_PROVIDES = xserver-xorg-input-$(INPUTABI)
+ifeq ($(PACKAGE),)
+PACKAGE=$(shell awk '/^Package:/ { print $$2; exit }' < debian/control)
+endif
+
+.PHONY: serverabi
+serverabi:
+ifeq ($(SERVERMINVERS),)
+	@echo error: xserver-xorg-dev needs to be installed
+	@exit 1
+else
+	echo "xserver:Depends=$(SERVER_DEPENDS)" >> debian/$(PACKAGE).substvars
+	echo "xviddriver:Provides=$(VIDDRIVER_PROVIDES)" >> debian/$(PACKAGE).substvars
+	echo "xinpdriver:Provides=$(INPDRIVER_PROVIDES)" >> debian/$(PACKAGE).substvars
+endif
 
 include debian/xsfbs/xsfbs-autoreconf.mk
 
