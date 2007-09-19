@@ -1,3 +1,10 @@
+xserver-xorg-video-sis (1:0.9.3-2ubuntu1) gutsy; urgency=low
+
+  * commit 391dad44fa305be4cded31cf2f9a4fba7420af99 from upstream
+    Fix xserver version detection. (LP: #118325)
+
+ -- Tormod Volden <debian.tormod@gmail.com>  Wed, 19 Sep 2007 20:31:14 +0200
+
 xserver-xorg-video-sis (1:0.9.3-2) unstable; urgency=low
 
   [ Julien Cristau ]
