@@ -1,10 +1,11 @@
-xserver-xorg-video-sis (1:0.9.3-5ubuntu1) hardy; urgency=low
+xserver-xorg-video-sis (1:0.9.3-6) unstable; urgency=low
 
-  * Merge from debian unstable, remaining changes:
-    + commit 391dad44fa305be4cded31cf2f9a4fba7420af99 from upstream
-    Fix xserver version detection.
+  * Pull upstream commits up to 748df8070893675ad3839fff295bec913be876f2
+    + Fix xserver version detection, closes: #449280.
+  * Add upstream URL to debian/copyright.
+  * Add myself to Uploaders, and remove Branden with his permission.
 
- -- Timo Aaltonen <tepsipakki@ubuntu.com>  Wed, 07 Nov 2007 20:14:28 +0200
+ -- Brice Goglin <bgoglin@debian.org>  Sun, 11 Nov 2007 12:07:21 +0100
 
 xserver-xorg-video-sis (1:0.9.3-5) unstable; urgency=low
 
@@ -27,13 +28,6 @@ xserver-xorg-video-sis (1:0.9.3-3) experimental; urgency=low
     load it when necessary.
 
  -- David Nusinow <dnusinow@debian.org>  Wed, 22 Aug 2007 21:36:54 -0400
-
-xserver-xorg-video-sis (1:0.9.3-2ubuntu1) gutsy; urgency=low
-
-  * commit 391dad44fa305be4cded31cf2f9a4fba7420af99 from upstream
-    Fix xserver version detection. (LP: #118325)
-
- -- Tormod Volden <debian.tormod@gmail.com>  Wed, 19 Sep 2007 20:31:14 +0200
 
 xserver-xorg-video-sis (1:0.9.3-2) unstable; urgency=low
 
@@ -173,4 +167,3 @@ xserver-xorg-driver-sis (1:0.7.1-1) breezy; urgency=low
   * First xserver-xorg-driver-sis release.
 
  -- Daniel Stone <daniel.stone@ubuntu.com>  Wed,  6 Jul 2005 15:48:17 +1000
-

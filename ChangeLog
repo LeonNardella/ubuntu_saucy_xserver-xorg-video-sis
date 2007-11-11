@@ -1,3 +1,46 @@
+commit 748df8070893675ad3839fff295bec913be876f2
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Mon Sep 3 05:52:43 2007 -0400
+
+    Add *~ to .gitignore to skip patch/emacs droppings
+
+commit f269b388cb8853b4eabfe8c42e03baf4caa32ad8
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Thu Aug 23 19:25:55 2007 -0400
+
+    Rename .cvsignore to .gitignore
+
+commit ba3c4d45d6e8f04536e6512103db820f0d21b77a
+Author: Julien Cristau <jcristau@debian.org>
+Date:   Thu Aug 9 03:36:07 2007 +0200
+
+    Get rid of the XFree86Server macro.
+    
+    It's not exported by xserver these days, so don't test it.
+
+commit 391dad44fa305be4cded31cf2f9a4fba7420af99
+Author: Julien Cristau <jcristau@debian.org>
+Date:   Thu Aug 9 03:35:12 2007 +0200
+
+    Fix xserver version detection.
+    
+    Newer xserver releases report a version of 1.x, which is smaller
+    than 6.8.99.900.
+
+commit 89d2f2118a2409d1bf0239448a4e3d2f6e7a1919
+Author: Brice Goglin <bgoglin@debian.org>
+Date:   Tue Aug 7 12:57:23 2007 +0200
+
+    Define SIS_*_VERSION using PACKAGE_VERSION*
+
+commit 346693719a49cf50ff62cb25b09d433d2d8db9ea
+Author: Alex Deucher <alex@botch2.com>
+Date:   Tue Feb 27 20:35:35 2007 -0500
+
+    bump Xv image height up from 1080 to 1088 for 315 chips
+    
+    fixes bug 10075
+
 commit be1d494e0921d234918c899c6fe833c5d74b16fd
 Author: Eamon Walsh <ewalsh@tycho.nsa.gov>
 Date:   Mon Dec 18 14:09:45 2006 -0500

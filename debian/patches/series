@@ -1,4 +1,3 @@
 01_missing_assert.diff
 02_missing_unistd.diff
 03_gen_pci_ids.diff
-100_xserver-version-detection.diff
