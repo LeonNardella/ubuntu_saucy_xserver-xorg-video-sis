@@ -1,5 +1,3 @@
-/* $XFree86$ */
-/* $XdotOrg: driver/xf86-video-sis/src/sis_opt.c,v 1.29 2005/09/20 16:34:32 twini Exp $ */
 /*
  * SiS driver option evaluation
  *

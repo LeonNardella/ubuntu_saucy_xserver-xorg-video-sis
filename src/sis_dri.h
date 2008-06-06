@@ -1,5 +1,3 @@
-/* $XFree86$ */
-/* $XdotOrg: driver/xf86-video-sis/src/sis_dri.h,v 1.15 2005/08/16 22:08:50 twini Exp $ */
 /*
  * SiS DRI wrapper
  *
@@ -115,13 +113,10 @@ typedef struct {
   int dummy;
 } SISDRIContextRec, *SISDRIContextPtr;
 
-#ifdef XFree86Server
-
 #include "screenint.h"
 
 Bool SISDRIScreenInit(ScreenPtr pScreen);
 void SISDRICloseScreen(ScreenPtr pScreen);
 Bool SISDRIFinishScreenInit(ScreenPtr pScreen);
 
-#endif
 #endif
