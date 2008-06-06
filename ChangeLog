@@ -1,3 +1,117 @@
+commit 70ccce405b2134e7548a4a3660f9cff9fc306780
+Author: Adam Jackson <ajax@redhat.com>
+Date:   Wed Mar 19 15:31:27 2008 -0400
+
+    sis 0.10.0
+
+commit 3aff2a77c9c6bfff543195dc8908e422793a8f37
+Author: Adam Jackson <ajax@redhat.com>
+Date:   Wed Mar 19 15:29:30 2008 -0400
+
+    Fix distcheck
+
+commit be77b71c3614e5b926caf3a177f6d5b7ef8d528b
+Author: Adam Jackson <ajax@redhat.com>
+Date:   Wed Mar 19 15:28:09 2008 -0400
+
+    Death to RCS tags.
+
+commit 6c7f2d4d2d1e89255007033be0f56a8cbe27397f
+Author: Matthieu Herrb <matthieu.herrb@laas.fr>
+Date:   Sat Mar 8 23:51:57 2008 +0100
+
+    Makefile.am: nuke RCS Id
+
+commit be954beff0c1e7942845ff4c055e183784dddad9
+Author: Julien Cristau <jcristau@debian.org>
+Date:   Fri Mar 7 17:09:35 2008 +0100
+
+    fixup pciaccess version detect
+
+commit f43247d383de0f4753db019482149ff923d884b0
+Author: Julien Cristau <jcristau@debian.org>
+Date:   Wed Feb 27 14:10:17 2008 +0100
+
+    Require pciaccess >= 0.10.0 for pci_device_map_range()
+
+commit 36ed5521afb524f49bde348775be2bdd78fa0383
+Author: Dave Airlie <airlied@linux.ie>
+Date:   Thu Jan 17 15:49:41 2008 +1000
+
+    fix some thinkos in the pciaccess patch, this now works on real hardware
+
+commit 797e6215ad9039ebbab547581c8ab3c143afb14f
+Author: Dave Airlie <airlied@linux.ie>
+Date:   Wed Jan 16 17:46:06 2008 +1000
+
+    fixup unmap memory
+
+commit 992f586cbf85d9d99059209afc66e62ee5eb80ce
+Author: Dave Airlie <airlied@linux.ie>
+Date:   Wed Jan 16 17:42:44 2008 +1000
+
+    use map domain memory with pciinfo
+
+commit 0e4dc89b7f00d1453d5c81be36c3d5ea39e3caad
+Author: Pete Zaitcev <zaitcev@redhat.com>
+Date:   Wed Jan 16 13:39:01 2008 +1000
+
+    switch vga over to pciaccess
+
+commit 585e03e6878dd257c694517be9ea231a6b3cfb66
+Author: Dave Airlie <airlied@linux.ie>
+Date:   Wed Jan 16 13:34:58 2008 +1000
+
+    switch bios reading over
+
+commit ef98280b03318ae39d9b8ba45b13a9e27f520107
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 17:01:53 2008 +1000
+
+    finish off read/write long conversion
+
+commit e2cb9fa30350ee0c08469ad6ea7f34cecf106e33
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 16:45:49 2008 +1000
+
+    convert all hostbridge read/writes to accessor functions
+
+commit 77641c76963bbfea8914092ee65f116ba6d23967
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 16:14:07 2008 +1000
+
+    fixup type punning
+
+commit 08cfb9c048a33df584354a42093aeaf73db8e4d4
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 16:09:04 2008 +1000
+
+    another open/fopen confusion
+
+commit 6753430565085c88f2a26009b75d92fbd1e8d598
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 16:06:47 2008 +1000
+
+    fix thinko between open/fopen
+
+commit 70989db1c4e9465a7dd39f5d06edfc24a67d9ad6
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 16:01:09 2008 +1000
+
+    fix warnings in build
+
+commit d94a2efa2ea26c4fbb246ea93e9cc10b97cf3ea3
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Tue Jan 8 14:38:04 2008 +1000
+
+    inital SiS pci access patch
+
+commit 14d6555419ca3ab2ab58afe0ba1fc40038a69caa
+Author: Julien Cristau <jcristau@debian.org>
+Date:   Fri Nov 16 12:39:15 2007 +0100
+
+    Bump to 0.9.4.
+
 commit 748df8070893675ad3839fff295bec913be876f2
 Author: James Cloos <cloos@jhcloos.com>
 Date:   Mon Sep 3 05:52:43 2007 -0400
