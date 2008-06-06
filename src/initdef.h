@@ -1,5 +1,3 @@
-/* $XFree86$ */
-/* $XdotOrg: driver/xf86-video-sis/src/initdef.h,v 1.25 2005/09/07 19:44:14 twini Exp $ */
 /*
  * Global definitions for init.c and init301.c
  *

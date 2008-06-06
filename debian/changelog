@@ -1,3 +1,78 @@
+xserver-xorg-video-sis (1:0.10.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patches 01_missing_assert.diff and 02_missing_unistd.diff.
+  * Add myself to Uploaders.
+  * Bump Standards-Version to 3.7.3.
+  * Drop the XS- prefix from Vcs-* control fields.
+  * Run dpkg-shlibdeps with --warnings=6.  Drivers reference symbols from
+    /usr/bin/Xorg and other modules, and that's not a bug, so we want
+    dpkg-shlibdeps to shut up about symbols it can't find.  Build-depend on
+    dpkg-dev >= 1.14.17.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 06 Jun 2008 12:33:23 +0200
+
+xserver-xorg-video-sis (1:0.9.3-6) unstable; urgency=low
+
+  * Pull upstream commits up to 748df8070893675ad3839fff295bec913be876f2
+    + Fix xserver version detection, closes: #449280.
+  * Add upstream URL to debian/copyright.
+  * Add myself to Uploaders, and remove Branden with his permission.
+
+ -- Brice Goglin <bgoglin@debian.org>  Sun, 11 Nov 2007 12:07:21 +0100
+
+xserver-xorg-video-sis (1:0.9.3-5) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Sun, 16 Sep 2007 15:43:48 -0400
+
+xserver-xorg-video-sis (1:0.9.3-4) experimental; urgency=low
+
+  * Build against and build-dep on xserver 1.4
+  * Bump standards version to 3.7.2.2. No changes needed.
+
+ -- David Nusinow <dnusinow@debian.org>  Sun, 09 Sep 2007 23:23:57 -0400
+
+xserver-xorg-video-sis (1:0.9.3-3) experimental; urgency=low
+
+  * Build against xserver 1.3.99.0 and build-dep on it as well
+  * Add 03_gen_pci_ids.diff. This patch provides a listing of the PCI id's
+    that are supported by this driver so that the server can automatically
+    load it when necessary.
+
+ -- David Nusinow <dnusinow@debian.org>  Wed, 22 Aug 2007 21:36:54 -0400
+
+xserver-xorg-video-sis (1:0.9.3-2) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Add link to xserver-xorg-core bug script, so that bugreports contain
+    the user's config and log files.
+  * Bump Standards-Version to 3.7.2.
+
+  [ Timo Aaltonen ]
+  * Replaces/Conflicts: xserver-xorg-driver-sis.
+
+  [ Brice Goglin ]
+  * Don't build-dep on libdrm-dev on hurd-i386, thanks Michael Banck
+    (closes: #392872).
+  * Install the upstream changelog.
+  * Bump Build-Depends: xserver-xorg-dev to >= 2:1.2.99.902
+    (needed to let xsfbs get access to serverminver).
+  * Add XS-Vcs-*.
+  * Add a link to www.X.org and a reference to the xf86-video-sis
+    module in the long description.
+  * Remove Fabio from uploaders with his permission. He's always welcome back.
+
+ -- Julien Cristau <jcristau@debian.org>  Wed, 02 May 2007 15:21:11 +0200
+
+xserver-xorg-video-sis (1:0.9.3-1) experimental; urgency=low
+
+  * New upstream version
+  * Generate server dependencies automatically from the ABI
+
+ -- David Nusinow <dnusinow@debian.org>  Wed, 21 Feb 2007 22:54:34 -0500
+
 xserver-xorg-video-sis (1:0.9.1-4) unstable; urgency=low
 
   * Add 01_missing_assert.diff to include assert.h because the driver now uses

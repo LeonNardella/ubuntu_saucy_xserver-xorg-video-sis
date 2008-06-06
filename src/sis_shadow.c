@@ -1,5 +1,3 @@
-/* $XFree86$ */
-/* $XdotOrg: driver/xf86-video-sis/src/sis_shadow.c,v 1.12 2005/09/20 16:34:32 twini Exp $ */
 /*
  * Copyright (C) 1999-2004 by The XFree86 Project, Inc.
  * based on code written by Mark Vojkovich

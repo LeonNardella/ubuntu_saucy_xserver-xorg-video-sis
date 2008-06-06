@@ -1,5 +1,3 @@
-/* $XFree86$ */
-/* $XdotOrg: driver/xf86-video-sis/src/sis_dga.c,v 1.11 2005/07/11 02:29:59 ajax Exp $ */
 /*
  * SiS DGA handling
  *
