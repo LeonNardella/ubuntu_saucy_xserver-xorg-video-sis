@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.0-1build2) intrepid; urgency=low
+
+  * Rebuild against the new xserver-xorg-dev.
+
+ -- Timo Aaltonen <tepsipakki@ubuntu.com>  Fri, 12 Sep 2008 00:27:41 +0300
+
 xserver-xorg-video-sis (1:0.10.0-1build1) intrepid; urgency=low
 
   * Rebuild against the new xserver-xorg-dev.
