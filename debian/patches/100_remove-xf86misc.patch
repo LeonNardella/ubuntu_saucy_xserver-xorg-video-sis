@@ -1,0 +1,107 @@
+From 31509152757643b32f42fe0a21d3b00137540e40 Mon Sep 17 00:00:00 2001
+From: Daniel Stone<daniel@fooishbar.org>
+Date: Sun, 20  Jul  2008  01:15:52  +0000
+Subject: Remove XFree86-Misc (PassMessage) support
+
+The driver used PassMessage/HandleMessage from XFree86-Misc to ... just
+return BadMatch.  So how about we drop this bit of code, including an
+additional dependency?
+---
+diff --git a/configure.ac b/configure.ac
+index 796269a..071bcda 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -58,7 +58,6 @@ XORG_DRIVER_CHECK_EXT(XINERAMA, xineramaproto)
+ XORG_DRIVER_CHECK_EXT(RANDR, randrproto)
+ XORG_DRIVER_CHECK_EXT(RENDER, renderproto)
+ XORG_DRIVER_CHECK_EXT(XV, videoproto)
+-XORG_DRIVER_CHECK_EXT(XF86MISC, xf86miscproto)
+ XORG_DRIVER_CHECK_EXT(DPMSExtension, xextproto)
+ 
+ # Checks for pkg-config packages
+diff --git a/src/sis_driver.c b/src/sis_driver.c
+index 96fd52d..1f03227 100644
+--- a/src/sis_driver.c
++++ b/src/sis_driver.c
+@@ -57,8 +57,6 @@
+ #include "mibank.h"
+ #include "mipointer.h"
+ #include "mibstore.h"
+-#define _XF86MISC_SERVER_
+-#include <X11/extensions/xf86misc.h>
+ #include "edid.h"
+ 
+ #define SIS_NEED_inSISREG
+@@ -669,11 +667,7 @@ SISProbe(DriverPtr drv, int flags)
+ 	    pScrn->LeaveVT          = SISLeaveVT;
+ 	    pScrn->FreeScreen       = SISFreeScreen;
+ 	    pScrn->ValidMode        = SISValidMode;
+-#ifdef X_XF86MiscPassMessage
+-	    if(xf86GetVersion() >= XF86_VERSION_NUMERIC(4,3,99,2,0)) {
+-	       pScrn->HandleMessage = SISHandleMessage;
+-	    }
+-#endif
++
+ 	    foundScreen = TRUE;
+ 	}
+ 
+diff --git a/src/sis_driver.h b/src/sis_driver.h
+index 2105ca2..5c90383 100644
+--- a/src/sis_driver.h
++++ b/src/sis_driver.h
+@@ -1577,10 +1577,6 @@ void	    SISAdjustFrame(int scrnIndex, int x, int y, int flags);
+ #ifdef SISDUALHEAD
+ static Bool 	  SISSaveScreenDH(ScreenPtr pScreen, int mode);
+ #endif
+-#ifdef X_XF86MiscPassMessage
+-extern int	  SISHandleMessage(int scrnIndex, const char *msgtype,
+-				const char *msgval, char **retmsg);
+-#endif
+ static void       SISFreeScreen(int scrnIndex, int flags);
+ static ModeStatus SISValidMode(int scrnIndex, DisplayModePtr mode,
+ 				Bool verbose, int flags);
+diff --git a/src/sis_utility.c b/src/sis_utility.c
+index bbc7629..a9bcd2b 100644
+--- a/src/sis_utility.c
++++ b/src/sis_utility.c
+@@ -38,8 +38,6 @@
+ #define NEED_EVENTS
+ #include <X11/X.h>
+ #include "dixstruct.h"
+-#define _XF86MISC_SERVER_
+-#include <X11/extensions/xf86misc.h>
+ 
+ #include "sis_videostr.h"
+ 
+@@ -255,9 +253,6 @@ typedef struct {
+     int		 (*HandleSiSDirectCommand[SISCTRL_MAX_SCREENS])(xSiSCtrlCommandReply *);
+ } xSiSCtrlScreenTable;
+ 
+-#ifdef X_XF86MiscPassMessage
+-int		SISHandleMessage(int scrnIndex, const char *msgtype, const char *msgval, char **retmsg);
+-#endif
+ void		SiSCtrlExtInit(ScrnInfoPtr pScrn);
+ void		SiSCtrlExtUnregister(SISPtr pSiS, int index);
+ 
+@@ -853,19 +848,6 @@ SISGetMergedModeDetails(ScrnInfoPtr pScrn,
+ #endif
+ 
+ /***********************************
+- *     MessageHandler interface    *
+- *   (unused now; use extension)   *
+- ***********************************/
+-
+-#ifdef X_XF86MiscPassMessage
+-int
+-SISHandleMessage(int scrnIndex, const char *msgtype, const char *msgval, char **retmsg)
+-{
+-    return BadMatch;
+-}
+-#endif
+-
+-/***********************************
+  *   SiSCtrl extension interface   *
+  ***********************************/
+ 
+--
+cgit v0.8.1-24-ge5fb

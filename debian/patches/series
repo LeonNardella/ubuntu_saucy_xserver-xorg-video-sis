@@ -1,1 +1,2 @@
 03_gen_pci_ids.diff
+100_remove-xf86misc.patch
