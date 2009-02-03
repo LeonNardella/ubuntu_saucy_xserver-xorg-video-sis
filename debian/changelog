@@ -1,26 +1,18 @@
-xserver-xorg-video-sis (1:0.10.0-1ubuntu1) jaunty; urgency=low
+xserver-xorg-video-sis (1:0.10.1-1) experimental; urgency=low
 
-  * 100_remove-xf86misc.patch: Drop PassMessage-support. (FTBFS)
+  * New upstream release.
+  * Build against xserver 1.6 rc1.
+  * Allow parallel builds.
+  * Run autoreconf on build; add build-deps on automake, libtool and
+    xutils-dev.
 
- -- Timo Aaltonen <tjaalton@ubuntu.com>  Mon, 15 Dec 2008 14:25:26 +0200
+ -- Brice Goglin <bgoglin@debian.org>  Tue, 03 Feb 2009 23:27:02 +0100
 
-xserver-xorg-video-sis (1:0.10.0-1build3) jaunty; urgency=low
+xserver-xorg-video-sis (1:0.10.0-2) experimental; urgency=low
 
-  * Rebuild against the new xserver
+  * Build against xserver 1.5.
 
- -- Timo Aaltonen <tjaalton@ubuntu.com>  Mon, 15 Dec 2008 10:19:08 +0200
-
-xserver-xorg-video-sis (1:0.10.0-1build2) intrepid; urgency=low
-
-  * Rebuild against the new xserver-xorg-dev.
-
- -- Timo Aaltonen <tepsipakki@ubuntu.com>  Fri, 12 Sep 2008 00:27:41 +0300
-
-xserver-xorg-video-sis (1:0.10.0-1build1) intrepid; urgency=low
-
-  * Rebuild against the new xserver-xorg-dev.
-
- -- Timo Aaltonen <tepsipakki@ubuntu.com>  Mon, 07 Jul 2008 17:52:08 +0300
+ -- Julien Cristau <jcristau@debian.org>  Tue, 09 Sep 2008 23:57:09 +0100
 
 xserver-xorg-video-sis (1:0.10.0-1) unstable; urgency=low
 

@@ -57,8 +57,6 @@
 #include "mibank.h"
 #include "mipointer.h"
 #include "mibstore.h"
-#define _XF86MISC_SERVER_
-#include <X11/extensions/xf86misc.h>
 #include "edid.h"
 
 #define SIS_NEED_inSISREG
@@ -669,11 +667,7 @@ SISProbe(DriverPtr drv, int flags)
 	    pScrn->LeaveVT          = SISLeaveVT;
 	    pScrn->FreeScreen       = SISFreeScreen;
 	    pScrn->ValidMode        = SISValidMode;
-#ifdef X_XF86MiscPassMessage
-	    if(xf86GetVersion() >= XF86_VERSION_NUMERIC(4,3,99,2,0)) {
-	       pScrn->HandleMessage = SISHandleMessage;
-	    }
-#endif
+
 	    foundScreen = TRUE;
 	}
 
@@ -7337,11 +7331,12 @@ SISMapMem(ScrnInfoPtr pScrn)
                  xf86DrvMsg (pScrn->scrnIndex, X_ERROR,
                              "Unable to map IO dense aperture. %s (%d)\n",
                              strerror (err), err);
-#endif
+	     }
+#endif /* XSERVER_LIBPCIACCESS */
 	}
 	pSiS->IOBaseDense = pSiSEnt->IOBaseDense;
-    } else
-#endif
+    } else {
+#endif /* SISDUALHEAD */
 #ifndef XSERVER_LIBPCIACCESS
 	     pSiS->IOBaseDense = xf86MapPciMem(pScrn->scrnIndex, VIDMEM_MMIO,
                     pSiS->PciTag, pSiS->IOAddress, (pSiS->mmioSize * 1024));
@@ -7357,8 +7352,11 @@ SISMapMem(ScrnInfoPtr pScrn)
                  xf86DrvMsg (pScrn->scrnIndex, X_ERROR,
                              "Unable to map IO dense aperture. %s (%d)\n",
                              strerror (err), err);
+	     }
+#endif /* XSERVER_LIBPCIACCESS */
+#ifdef SISDUALHEAD
+    }
 #endif
-
     if(pSiS->IOBaseDense == NULL) {
        SISErrorLog(pScrn, "Could not map MMIO dense area\n");
        return FALSE;
