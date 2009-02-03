@@ -1,0 +1,199 @@
+xserver-xorg-video-sis (1:0.10.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Build against xserver 1.6 rc1.
+  * Allow parallel builds.
+  * Run autoreconf on build; add build-deps on automake, libtool and
+    xutils-dev.
+
+ -- Brice Goglin <bgoglin@debian.org>  Tue, 03 Feb 2009 23:27:02 +0100
+
+xserver-xorg-video-sis (1:0.10.0-2) experimental; urgency=low
+
+  * Build against xserver 1.5.
+
+ -- Julien Cristau <jcristau@debian.org>  Tue, 09 Sep 2008 23:57:09 +0100
+
+xserver-xorg-video-sis (1:0.10.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patches 01_missing_assert.diff and 02_missing_unistd.diff.
+  * Add myself to Uploaders.
+  * Bump Standards-Version to 3.7.3.
+  * Drop the XS- prefix from Vcs-* control fields.
+  * Run dpkg-shlibdeps with --warnings=6.  Drivers reference symbols from
+    /usr/bin/Xorg and other modules, and that's not a bug, so we want
+    dpkg-shlibdeps to shut up about symbols it can't find.  Build-depend on
+    dpkg-dev >= 1.14.17.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 06 Jun 2008 12:33:23 +0200
+
+xserver-xorg-video-sis (1:0.9.3-6) unstable; urgency=low
+
+  * Pull upstream commits up to 748df8070893675ad3839fff295bec913be876f2
+    + Fix xserver version detection, closes: #449280.
+  * Add upstream URL to debian/copyright.
+  * Add myself to Uploaders, and remove Branden with his permission.
+
+ -- Brice Goglin <bgoglin@debian.org>  Sun, 11 Nov 2007 12:07:21 +0100
+
+xserver-xorg-video-sis (1:0.9.3-5) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Sun, 16 Sep 2007 15:43:48 -0400
+
+xserver-xorg-video-sis (1:0.9.3-4) experimental; urgency=low
+
+  * Build against and build-dep on xserver 1.4
+  * Bump standards version to 3.7.2.2. No changes needed.
+
+ -- David Nusinow <dnusinow@debian.org>  Sun, 09 Sep 2007 23:23:57 -0400
+
+xserver-xorg-video-sis (1:0.9.3-3) experimental; urgency=low
+
+  * Build against xserver 1.3.99.0 and build-dep on it as well
+  * Add 03_gen_pci_ids.diff. This patch provides a listing of the PCI id's
+    that are supported by this driver so that the server can automatically
+    load it when necessary.
+
+ -- David Nusinow <dnusinow@debian.org>  Wed, 22 Aug 2007 21:36:54 -0400
+
+xserver-xorg-video-sis (1:0.9.3-2) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Add link to xserver-xorg-core bug script, so that bugreports contain
+    the user's config and log files.
+  * Bump Standards-Version to 3.7.2.
+
+  [ Timo Aaltonen ]
+  * Replaces/Conflicts: xserver-xorg-driver-sis.
+
+  [ Brice Goglin ]
+  * Don't build-dep on libdrm-dev on hurd-i386, thanks Michael Banck
+    (closes: #392872).
+  * Install the upstream changelog.
+  * Bump Build-Depends: xserver-xorg-dev to >= 2:1.2.99.902
+    (needed to let xsfbs get access to serverminver).
+  * Add XS-Vcs-*.
+  * Add a link to www.X.org and a reference to the xf86-video-sis
+    module in the long description.
+  * Remove Fabio from uploaders with his permission. He's always welcome back.
+
+ -- Julien Cristau <jcristau@debian.org>  Wed, 02 May 2007 15:21:11 +0200
+
+xserver-xorg-video-sis (1:0.9.3-1) experimental; urgency=low
+
+  * New upstream version
+  * Generate server dependencies automatically from the ABI
+
+ -- David Nusinow <dnusinow@debian.org>  Wed, 21 Feb 2007 22:54:34 -0500
+
+xserver-xorg-video-sis (1:0.9.1-4) unstable; urgency=low
+
+  * Add 01_missing_assert.diff to include assert.h because the driver now uses
+    the assert macro. Thanks Nate Eldredge. Closes: #392546
+  * Add 02_missing_unistd.diff to include unistd.h and fcntl.h because 
+    sis_regs.h and sis_driver.c uses various functions defined in there, and
+    yet it doesn't include it. Thanks Martin Michlmayr. Closes: #392595
+
+ -- David Nusinow <dnusinow@debian.org>  Fri, 13 Oct 2006 16:50:58 -0400
+
+xserver-xorg-video-sis (1:0.9.1-3) unstable; urgency=low
+
+  [ Steve Langasek ]
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Mon, 18 Sep 2006 19:57:54 -0400
+
+xserver-xorg-video-sis (1:0.9.1-2) experimental; urgency=low
+
+  [ Drew Parsons ]
+  *  Provides: xserver-xorg-video-1.0 not xserver-xorg-video.
+
+  [ David Nusinow ]
+  * Bump xserver (build-)depends epochs to 2: to deal with botched
+    server upload
+
+ -- David Nusinow <dnusinow@debian.org>  Tue, 22 Aug 2006 23:46:40 +0000
+
+xserver-xorg-video-sis (1:0.9.1-1) experimental; urgency=low
+
+  [ Andres Salomon ]
+  * Test for obj-$(DEB_BUILD_GNU_TYPE) before creating it during build;
+    idempotency fix.
+  * Run dh_install w/ --list-missing.
+
+  [ David Nusinow ]
+  * New upstream release
+  * Bump dependency on xserver-xorg-core to >= 1:1.1.1. Do the same thing for
+    the build-dep on xserver-xorg-dev.
+  * Bump debhelper compat to 5
+
+ -- David Nusinow <dnusinow@debian.org>  Tue, 15 Aug 2006 23:59:42 +0000
+
+xserver-xorg-video-sis (1:0.8.1.3-2) unstable; urgency=low
+
+  * Upload to modular
+
+ -- David Nusinow <dnusinow@debian.org>  Sun, 26 Mar 2006 20:25:56 -0500
+
+xserver-xorg-video-sis (1:0.8.1.3-1) experimental; urgency=low
+
+  * First upload to Debian
+  * Change source package, package, and provides names to denote the
+    type of driver and that they are for xserver-xorg
+
+ -- David Nusinow <dnusinow@debian.org>  Fri, 13 Jan 2006 00:40:17 -0500
+
+xserver-xorg-driver-sis (1:0.8.1.3-0ubuntu1) dapper; urgency=low
+
+  * New upstream release.
+  * Add provides on xserver-xorg-driver.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Wed,  4 Jan 2006 20:02:59 +1100
+
+xserver-xorg-driver-sis (1:0.8.1.2-0ubuntu2) dapper; urgency=low
+
+  * Add -ffunction-sections for hppa crapdamnitargh.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Wed, 21 Dec 2005 17:13:05 +1100
+
+xserver-xorg-driver-sis (1:0.8.1.2-0ubuntu1) dapper; urgency=low
+
+  * New upstream release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Mon, 19 Dec 2005 09:18:31 +1100
+
+xserver-xorg-driver-sis (1:0.8.1.1-0ubuntu1) dapper; urgency=low
+
+  * New upstream version.
+  * Bump Build-Depends on libdrm-dev to >> 2.0.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Mon, 12 Dec 2005 13:27:27 +1100
+
+xserver-xorg-driver-sis (1:0.8.1-0ubuntu2) dapper; urgency=low
+
+  * Add missing Build-Depends (x11proto-core-dev, x11proto-fonts-dev,
+    x11proto-randr-dev, x11proto-render-dev, libdrm (>> 1.0.5),
+    x11proto-xf86dri-dev).
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Mon,  5 Dec 2005 12:57:53 +1100
+
+xserver-xorg-driver-sis (1:0.8.1-0ubuntu1) dapper; urgency=low
+
+  * New upstream release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Tue, 22 Nov 2005 13:09:34 +1100
+
+xserver-xorg-driver-sis (1:0.8.0.1-1) dapper; urgency=low
+
+  * Update to new upstream version.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Tue, 25 Oct 2005 18:44:28 +1000
+
+xserver-xorg-driver-sis (1:0.7.1-1) breezy; urgency=low
+
+  * First xserver-xorg-driver-sis release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Wed,  6 Jul 2005 15:48:17 +1000
