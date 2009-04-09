@@ -1,3 +1,25 @@
+commit 6ab99d8d66ccd77314760edcb6110db924be3dcf
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Mon Dec 22 14:38:17 2008 +1000
+
+    sis 0.10.1
+
+commit 7ae731c269a13613eed5ee8bef6cb9b6e82b74c6
+Author: Matthieu Herrb <matthieu.herrb@laas.fr>
+Date:   Thu Nov 6 23:40:34 2008 +0100
+
+    Fix build on alpha.
+
+commit 31509152757643b32f42fe0a21d3b00137540e40
+Author: Daniel Stone <daniel@fooishbar.org>
+Date:   Sun Jul 20 04:15:52 2008 +0300
+
+    Remove XFree86-Misc (PassMessage) support
+    
+    The driver used PassMessage/HandleMessage from XFree86-Misc to ... just
+    return BadMatch.  So how about we drop this bit of code, including an
+    additional dependency?
+
 commit 70ccce405b2134e7548a4a3660f9cff9fc306780
 Author: Adam Jackson <ajax@redhat.com>
 Date:   Wed Mar 19 15:31:27 2008 -0400

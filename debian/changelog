@@ -1,3 +1,26 @@
+xserver-xorg-video-sis (1:0.10.1-2) unstable; urgency=low
+
+  * Drop build-dep on x11proto-xf86misc-dev, not needed anymore.
+  * Upload to unstable.
+
+ -- Julien Cristau <jcristau@debian.org>  Thu, 09 Apr 2009 11:46:28 +0100
+
+xserver-xorg-video-sis (1:0.10.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Build against xserver 1.6 rc1.
+  * Allow parallel builds.
+  * Run autoreconf on build; add build-deps on automake, libtool and
+    xutils-dev.
+
+ -- Brice Goglin <bgoglin@debian.org>  Tue, 03 Feb 2009 23:27:02 +0100
+
+xserver-xorg-video-sis (1:0.10.0-2) experimental; urgency=low
+
+  * Build against xserver 1.5.
+
+ -- Julien Cristau <jcristau@debian.org>  Tue, 09 Sep 2008 23:57:09 +0100
+
 xserver-xorg-video-sis (1:0.10.0-1) unstable; urgency=low
 
   * New upstream release.
