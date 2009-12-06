@@ -1,3 +1,17 @@
+xserver-xorg-video-sis (1:0.10.2-1) experimental; urgency=low
+
+  [ Timo Aaltonen ]
+  * New upstream release.
+  * Bump Standards-Version to 3.8.3.
+  * Build against Xserver 1.7.
+  * Remove 03_gen_pci_ids.diff. The X server now uses an internal table to
+    choose a driver during autoconfiguration.
+
+  [ Cyril Brulebois ]
+  * Upload to experimental.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 06 Dec 2009 01:38:21 +0100
+
 xserver-xorg-video-sis (1:0.10.1-2) unstable; urgency=low
 
   * Drop build-dep on x11proto-xf86misc-dev, not needed anymore.
