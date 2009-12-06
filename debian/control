@@ -6,7 +6,7 @@ Uploaders: David Nusinow <dnusinow@debian.org>, Brice Goglin <bgoglin@debian.org
 Build-Depends:
  debhelper (>= 5.0.0),
  pkg-config,
- xserver-xorg-dev (>= 2:1.5.99.901),
+ xserver-xorg-dev (>= 2:1.7),
  x11proto-video-dev,
  x11proto-xext-dev,
  x11proto-gl-dev,
@@ -24,7 +24,7 @@ Build-Depends:
  automake,
  libtool,
  xutils-dev
-Standards-Version: 3.7.3
+Standards-Version: 3.8.3
 Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-sis
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-sis.git
 
