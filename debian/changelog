@@ -1,3 +1,18 @@
+xserver-xorg-video-sis (1:0.10.2-2) unstable; urgency=high
+
+  * High urgency upload for RC bug fix.
+
+  [ Julien Cristau ]
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+  * Remove myself from Uploaders
+
+  [ Tormod Volden ]
+  * Cherry-pick 8370499d4035ec7a5c8e1f1b04d5a6c404883442
+    Fix BIOS read on 650 and 760. (#19070) Closes: #546714. LP: #287475
+
+ -- Tormod Volden <debian.tormod@gmail.com>  Mon, 22 Mar 2010 23:27:06 +0100
+
 xserver-xorg-video-sis (1:0.10.2-1) experimental; urgency=low
 
   [ Timo Aaltonen ]
