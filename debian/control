@@ -2,11 +2,11 @@ Source: xserver-xorg-video-sis
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: David Nusinow <dnusinow@debian.org>, Brice Goglin <bgoglin@debian.org>
+Uploaders: David Nusinow <dnusinow@debian.org>, Brice Goglin <bgoglin@debian.org>, Cyril Brulebois <kibi@debian.org>
 Build-Depends:
  debhelper (>= 5.0.0),
  pkg-config,
- xserver-xorg-dev (>= 2:1.7),
+ xserver-xorg-dev (>= 2:1.7.6.901),
  x11proto-video-dev,
  x11proto-xext-dev,
  x11proto-gl-dev,
@@ -24,13 +24,13 @@ Build-Depends:
  automake,
  libtool,
  xutils-dev
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-sis
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-sis.git
 
 Package: xserver-xorg-video-sis
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${xserver:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${xviddriver:Depends}
 Provides: ${xviddriver:Provides}
 Replaces: xserver-xorg (<< 6.8.2-35), xserver-xorg-driver-sis
 Conflicts: xserver-xorg-driver-sis
