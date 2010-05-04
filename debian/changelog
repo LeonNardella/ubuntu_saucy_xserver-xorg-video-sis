@@ -1,3 +1,13 @@
+xserver-xorg-video-sis (1:0.10.2-3) unstable; urgency=low
+
+  * Update to new xsfbs, replace deprecated ${xserver:Depends} with
+    ${xviddriver:Depends} in Depends, and bump B-D on xserver-xorg-dev
+    accordingly.
+  * Add myself to Uploaders.
+  * Bump Standards-Version from 3.8.3 to 3.8.4 (no changes needed).
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 04 May 2010 00:29:06 +0200
+
 xserver-xorg-video-sis (1:0.10.2-2) unstable; urgency=high
 
   * High urgency upload for RC bug fix.
