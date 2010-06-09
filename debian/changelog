@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.2-3build1) maverick; urgency=low
+
+  * No-change rebuild against xserver 1.8
+
+ -- Christopher James Halse Rogers <raof@ubuntu.com>  Wed, 09 Jun 2010 14:29:32 +1000
+
 xserver-xorg-video-sis (1:0.10.2-3) unstable; urgency=low
 
   * Update to new xsfbs, replace deprecated ${xserver:Depends} with
