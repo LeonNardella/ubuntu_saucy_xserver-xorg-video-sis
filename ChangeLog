@@ -1,3 +1,180 @@
+commit 75a8a7c51547805358ced39e1a04820e17133264
+Author: Dave Airlie <airlied@redhat.com>
+Date:   Mon Jul 5 14:23:33 2010 +1000
+
+    sis 0.10.3
+
+commit ac05588db7da21d1ff2cb13bba11b66bb5d5c38b
+Author: Julien Cristau <jcristau@debian.org>
+Date:   Tue Jun 29 21:37:50 2010 +0100
+
+    Replace some broken URLs with winishhofer.eu
+    
+    The old one seems to be a casino web site nowadays.
+    
+    Debian bug#517075
+    
+    Reported-by: Nigel Tamplin <fuse@f2s.com>
+    Signed-off-by: Julien Cristau <jcristau@debian.org>
+
+commit 116d40678dfbb851fd401103f9b7447f4d47eb7c
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Mon Jun 14 08:14:30 2010 -0400
+
+    README: keep the text version of README, discard the sgml version
+    
+    The linuxdoc doc tool is deprecated.
+    README files are exclusively text files.
+    
+    Signed-off-by: Gaetan Nadon <memsize@videotron.ca>
+
+commit 5f9fd07d54b8bc26c0403e1b46acce23db1365d9
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Mon Jun 14 07:58:26 2010 -0400
+
+    README: fix linuxdoc content
+    
+    defs.ent are located under X11 directory
+    ident tag is not a Linuxdoc tag
+    replace docbook email tag with linuxdoc email tag
+    
+    Signed-off-by: Gaetan Nadon <memsize@videotron.ca>
+
+commit 1bec9268f503e249cf1a20f2597f3f6c78a13af4
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Sun Jun 13 10:56:05 2010 -0400
+
+    COPYING: replace stub file with actual Copyright notices.
+    
+    Signed-off-by: Gaetan Nadon <memsize@videotron.ca>
+
+commit 13583aba3e2abafd55fc894070cf5f050bbea4f2
+Author: Adam Jackson <ajax@redhat.com>
+Date:   Tue May 18 13:11:01 2010 -0400
+
+    Remove mibank.h reference
+    
+    Signed-off-by: Adam Jackson <ajax@redhat.com>
+
+commit 47233238a659318cae6b7d0f71ee44b689e249c3
+Author: david@fries.net <david@fries.net>
+Date:   Tue Sep 15 22:32:45 2009 -0500
+
+    SISVGABlankScreen: only update the hardware if we're changing the state
+    
+    The command `xset s reset` will reset the X server screensaver to
+    reset the timer for the screensaver and dpms.  If the display is
+    already on, it should do nothing as far as the hardware goes.  In the
+    SISVGABlankScreen routine it requires as reset to update the register,
+    but that will disrupt the VGA signal and cause the monitor to resync
+    leaving the screen blank for a couple seconds.  I have a program that
+    wants to keep the screensaver from coming on, but allow normal
+    operation when it isn't running.
+    
+    Debian bug#546838 <http://bugs.debian.org/546838>
+    
+    Signed-off-by: Julien Cristau <jcristau@debian.org>
+
+commit dff79298ae04cec6233cd043cbf3aeda6db67d42
+Author: Tiago Vignatti <tiago.vignatti@nokia.com>
+Date:   Thu May 6 20:15:04 2010 +0300
+
+    Document better the resource access hack
+    
+    Signed-off-by: Tiago Vignatti <tiago.vignatti@nokia.com>
+
+commit d33e45dcaee511d5f09ac5f68680e96f3ad60076
+Author: Alan Coopersmith <alan.coopersmith@sun.com>
+Date:   Fri Jan 15 13:55:44 2010 -0800
+
+    Update Sun license notices to current X.Org standard form
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@sun.com>
+
+commit 2c9baaaa8ace01d94e95ca4ad7216146339940dd
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Tue Dec 15 21:47:35 2009 -0500
+
+    configure.ac: use backticks rather than $() for cmd subs
+    
+    Use "$PKG_CONFIG" rather than hard coded "pkg-config"
+    
+    Acked-by: Dan Nicholson <dbn.lists@gmail.com>
+    Acked-by: Daniel Stone <daniel@fooishbar.org>
+    
+    Signed-off-by: Gaetan Nadon <memsize@videotron.ca>
+
+commit cbfa94ccb1ee6213342014f3c7063362acb274ff
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Mon Nov 23 09:25:05 2009 -0500
+
+    Makefile.am: add ChangeLog and INSTALL on MAINTAINERCLEANFILES
+    
+    Now that the INSTALL file is generated.
+    Allows running make maintainer-clean.
+
+commit a69569c72ea19d4d76c57a8077542fee4aeb501a
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Wed Oct 28 14:41:41 2009 -0400
+
+    INSTALL, NEWS, README or AUTHORS files are missing/incorrect #24206
+    
+    Automake 'foreign' option is specified in configure.ac.
+    Remove from Makefile.am
+
+commit 8d766ddd89a4d9d5c02ad186b049cca2d806a3d8
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Wed Oct 28 14:09:09 2009 -0400
+
+    INSTALL, NEWS, README or AUTHORS files are missing/incorrect #24206
+    
+    Add missing INSTALL file. Use standard GNU file on building tarball
+    README may have been updated
+    Remove AUTHORS file as it is empty and no content available yet.
+    Remove NEWS file as it is empty and no content available yet.
+
+commit b92482e522d3b8a6526c05bf491d3e768f282714
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Mon Oct 26 12:54:22 2009 -0400
+
+    Several driver modules do not have a ChangeLog target in Makefile.am #23814
+    
+    The git generated ChangeLog replaces the hand written one.
+    Update configure.ac to xorg-macros level 1.3.
+    Use XORG_DEFAULT_OPTIONS which replaces four XORG_* macros
+    Update Makefile.am to add ChangeLog target if missing
+    Remove ChangeLog from EXTRA_DIST or *CLEAN variables
+    This is a pre-req for the INSTALL_CMD
+
+commit 8655ebf788bb281f3f566d6335943527155b91a5
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Thu Oct 22 13:04:14 2009 -0400
+
+    .gitignore: use common defaults with custom section # 24239
+    
+    Using common defaults will reduce errors and maintenance.
+    Only the very small or inexistent custom section need periodic maintenance
+    when the structure of the component changes. Do not edit defaults.
+
+commit ef03b3abab51a5bf81813a524d177370053ddfa0
+Author: Gaetan Nadon <memsize@videotron.ca>
+Date:   Thu Oct 22 12:34:18 2009 -0400
+
+    .gitignore: use common defaults with custom section # 24239
+    
+    Using common defaults will reduce errors and maintenance.
+    Only the very small or inexistent custom section need periodic maintenance
+    when the structure of the component changes. Do not edit defaults.
+
+commit 8370499d4035ec7a5c8e1f1b04d5a6c404883442
+Author: Matteo Delfino <kendatsuba@gmail.com>
+Date:   Wed Oct 21 10:26:45 2009 -0400
+
+    Fix BIOS read on 650 and 760. (#19070)
+    
+    Signed-off-by: Matteo Delfino <kendatsuba@gmail.com>
+    Signed-off-by: Adam Jackson <ajax@redhat.com>
+
 commit 9e50319293b10508bba4e3acef4a2851e7ab1f7a
 Author: Dave Airlie <airlied@redhat.com>
 Date:   Thu Jul 30 12:04:29 2009 +1000

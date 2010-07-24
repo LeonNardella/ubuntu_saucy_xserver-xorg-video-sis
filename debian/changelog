@@ -1,8 +1,14 @@
-xserver-xorg-video-sis (1:0.10.2-3build1) maverick; urgency=low
+xserver-xorg-video-sis (1:0.10.3-1) unstable; urgency=low
 
-  * No-change rebuild against xserver 1.8
+  * New upstream release.
+    + SISVGABlankScreen: only update the hardware if we're changing the state
+      (closes: #546838)
+    + Fix broken URLs in various places (closes: #517075)
+  * Bump Standards-Version to 3.9.0.
+  * Bump xutils-dev build-dep for util-macros 1.4.
+  * Update debian/copyright from upstream COPYING.
 
- -- Christopher James Halse Rogers <raof@ubuntu.com>  Wed, 09 Jun 2010 14:29:32 +1000
+ -- Julien Cristau <jcristau@debian.org>  Sat, 24 Jul 2010 13:12:50 +0200
 
 xserver-xorg-video-sis (1:0.10.2-3) unstable; urgency=low
 
