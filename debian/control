@@ -23,8 +23,8 @@ Build-Depends:
  dpkg-dev (>= 1.14.17),
  automake,
  libtool,
- xutils-dev
-Standards-Version: 3.8.4
+ xutils-dev (>= 1:7.5+1),
+Standards-Version: 3.9.0
 Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-sis
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-sis.git
 
@@ -39,7 +39,5 @@ Description: X.Org X server -- SiS display driver
  .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
- <URL:http://xorg.freedesktop.org>
- <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
  This package is built from the X.org xf86-video-sis driver module.

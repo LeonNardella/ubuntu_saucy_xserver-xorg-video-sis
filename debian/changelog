@@ -1,3 +1,15 @@
+xserver-xorg-video-sis (1:0.10.3-1) unstable; urgency=low
+
+  * New upstream release.
+    + SISVGABlankScreen: only update the hardware if we're changing the state
+      (closes: #546838)
+    + Fix broken URLs in various places (closes: #517075)
+  * Bump Standards-Version to 3.9.0.
+  * Bump xutils-dev build-dep for util-macros 1.4.
+  * Update debian/copyright from upstream COPYING.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 24 Jul 2010 13:12:50 +0200
+
 xserver-xorg-video-sis (1:0.10.2-3) unstable; urgency=low
 
   * Update to new xsfbs, replace deprecated ${xserver:Depends} with
