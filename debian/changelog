@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.3-1build1) maverick; urgency=low
+
+  * No-change rebuild against Xserver 1.9 ABI
+
+ -- Christopher James Halse Rogers <raof@ubuntu.com>  Mon, 09 Aug 2010 13:41:21 +1000
+
 xserver-xorg-video-sis (1:0.10.3-1) unstable; urgency=low
 
   * New upstream release.
