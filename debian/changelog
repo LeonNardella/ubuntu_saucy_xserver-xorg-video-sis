@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.3-2build1) natty; urgency=low
+
+  * Rebuild against Xserver 1.10
+
+ -- Bryce Harrington <bryce@ubuntu.com>  Mon, 31 Jan 2011 18:39:00 -0800
+
 xserver-xorg-video-sis (1:0.10.3-2) experimental; urgency=low
 
   * Build against Xserver 1.9.1 rc1.
