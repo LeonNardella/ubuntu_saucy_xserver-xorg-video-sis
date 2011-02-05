@@ -1,3 +1,24 @@
+xserver-xorg-video-sis (1:0.10.3-3) unstable; urgency=low
+
+  * Switch to dh:
+    - Use debhelper 8.
+    - Use dh-autoreconf.
+    - Bump xserver-xorg-dev build-dep for dh_xsf_substvars and xsf
+      debhelper sequence.
+  * Remove xsfbs accordingly.
+  * Update Uploaders list. Thanks, David & Brice!
+  * Remove long obsolete Replaces/Conflicts.
+  * Wrap Depends/Provides.
+  * Bump Standards-Version to 3.9.1 (no changes needed).
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 05 Feb 2011 14:55:47 +0100
+
+xserver-xorg-video-sis (1:0.10.3-2) experimental; urgency=low
+
+  * Build against Xserver 1.9.1 rc1.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 16 Oct 2010 21:07:06 +0200
+
 xserver-xorg-video-sis (1:0.10.3-1) unstable; urgency=low
 
   * New upstream release.
