@@ -1,27 +1,17 @@
-xserver-xorg-video-sis (1:0.10.3-2ubuntu3) natty; urgency=low
+xserver-xorg-video-sis (1:0.10.3-3) unstable; urgency=low
 
-  * Rebuild to pick up new Xserver dependencies
+  * Switch to dh:
+    - Use debhelper 8.
+    - Use dh-autoreconf.
+    - Bump xserver-xorg-dev build-dep for dh_xsf_substvars and xsf
+      debhelper sequence.
+  * Remove xsfbs accordingly.
+  * Update Uploaders list. Thanks, David & Brice!
+  * Remove long obsolete Replaces/Conflicts.
+  * Wrap Depends/Provides.
+  * Bump Standards-Version to 3.9.1 (no changes needed).
 
- -- Christopher James Halse Rogers <raof@ubuntu.com>  Wed, 09 Mar 2011 14:51:54 +1100
-
-xserver-xorg-video-sis (1:0.10.3-2ubuntu2) natty; urgency=low
-
-  * Rebuild to pick up new Xserver dependencies
-
- -- Christopher James Halse Rogers <raof@ubuntu.com>  Wed, 23 Feb 2011 17:54:27 +1100
-
-xserver-xorg-video-sis (1:0.10.3-2ubuntu1) natty; urgency=low
-
-  * debian/control: Bump build-depends on xserver-xorg-dev to really,
-    really build against Xserver 1.10
-
- -- Christopher James Halse Rogers <raof@ubuntu.com>  Tue, 01 Feb 2011 22:33:10 +1100
-
-xserver-xorg-video-sis (1:0.10.3-2build1) natty; urgency=low
-
-  * Rebuild against Xserver 1.10
-
- -- Bryce Harrington <bryce@ubuntu.com>  Mon, 31 Jan 2011 18:39:00 -0800
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 05 Feb 2011 14:55:47 +0100
 
 xserver-xorg-video-sis (1:0.10.3-2) experimental; urgency=low
 
