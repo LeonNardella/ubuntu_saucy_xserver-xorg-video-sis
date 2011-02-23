@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.3-2ubuntu2) natty; urgency=low
+
+  * Rebuild to pick up new Xserver dependencies
+
+ -- Christopher James Halse Rogers <raof@ubuntu.com>  Wed, 23 Feb 2011 17:54:27 +1100
+
 xserver-xorg-video-sis (1:0.10.3-2ubuntu1) natty; urgency=low
 
   * debian/control: Bump build-depends on xserver-xorg-dev to really,
