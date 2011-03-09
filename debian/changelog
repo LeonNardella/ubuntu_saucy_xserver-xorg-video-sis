@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.3-2ubuntu3) natty; urgency=low
+
+  * Rebuild to pick up new Xserver dependencies
+
+ -- Christopher James Halse Rogers <raof@ubuntu.com>  Wed, 09 Mar 2011 14:51:54 +1100
+
 xserver-xorg-video-sis (1:0.10.3-2ubuntu2) natty; urgency=low
 
   * Rebuild to pick up new Xserver dependencies
