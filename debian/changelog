@@ -1,14 +1,9 @@
-xserver-xorg-video-sis (1:0.10.3-3build2) precise; urgency=low
+xserver-xorg-video-sis (1:0.10.4-1) unstable; urgency=low
 
-  * Rebuild again to fix upload snafu
+  * New upstream release:
+    - Fix FTBFS with X server 1.12.
 
- -- Christopher James Halse Rogers <raof@ubuntu.com>  Fri, 16 Dec 2011 09:57:09 +1100
-
-xserver-xorg-video-sis (1:0.10.3-3build1) precise; urgency=low
-
-  * Rebuild to pick up new Xserver dependencies
-
- -- Christopher James Halse Rogers <raof@ubuntu.com>  Fri, 16 Dec 2011 08:56:25 +1100
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 01 May 2012 19:17:28 +0200
 
 xserver-xorg-video-sis (1:0.10.3-3) unstable; urgency=low
 
