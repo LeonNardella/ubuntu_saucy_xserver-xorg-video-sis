@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.4-1build1) quantal-proposed; urgency=low
+
+  * Rebuild to pick up new Xserver dependencies
+
+ -- Maarten Lankhorst <maarten.lankhorst@canonical.com>  Fri, 08 Jun 2012 13:18:39 +0200
+
 xserver-xorg-video-sis (1:0.10.4-1) unstable; urgency=low
 
   * New upstream release:
