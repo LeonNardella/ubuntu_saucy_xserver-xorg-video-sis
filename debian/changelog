@@ -1,3 +1,21 @@
+xserver-xorg-video-sis (1:0.10.7-0ubuntu4) raring; urgency=low
+
+  * fix-ftbfs.diff: Replace remove-mibstore.diff with this.
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Fri, 08 Feb 2013 15:29:09 +0200
+
+xserver-xorg-video-sis (1:0.10.7-0ubuntu3) raring; urgency=low
+
+  * remove-mibstore.diff: Remove mibstore.h.
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Fri, 08 Feb 2013 14:21:22 +0200
+
+xserver-xorg-video-sis (1:0.10.7-0ubuntu2) raring; urgency=low
+
+  * Rebuild to pick up new Xserver dependencies.
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Fri, 08 Feb 2013 14:16:19 +0200
+
 xserver-xorg-video-sis (1:0.10.7-0ubuntu1) quantal-proposed; urgency=low
 
   * Sync from unreleased debian git.
