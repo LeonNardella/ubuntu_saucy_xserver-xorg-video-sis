@@ -1,3 +1,9 @@
+xserver-xorg-video-sis (1:0.10.7-0ubuntu999) saucy; urgency=low
+
+  * fix-exa-support.diff: Fix crash on old chipsets due to missing EXA support.
+
+ -- Leon Nardella <leon.nardella@gmail.com>  Thu, 07 Nov 2013 19:29:43 -0200
+
 xserver-xorg-video-sis (1:0.10.7-0ubuntu4) raring; urgency=low
 
   * fix-ftbfs.diff: Replace remove-mibstore.diff with this.
